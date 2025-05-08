@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ff3366;
+  }
+  
+  .search-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-user input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    height: 500px;
+    background-image: url('kompeni.jpg'); /* Ganti dengan nama file latar belakangmu */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35); /* Gelap tipis agar teks lebih terbaca */
+    z-index: 1;
+  }
+  
+  .hero-text, .hero-image {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border-radius: 6px;
+  }
+  
+  .btn-primary {
+    background-color: white;
+    color: black;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.85;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .hero-image {
+      margin-top: 30px;
+    }
+  
+    .hero-text h1 {
+      font-size: 36px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+  }
+  .hero-text,
+  .hero-image {
+    transition: all 1s ease;
+    opacity: 0;
+  }
+    
+  .btn-instagram {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #E1306C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-instagram:hover {
+    background-color: #c91c5a;
+  }
+  
